@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.css';
 import pic from '../images/planet.png';
 
 const Header = () => {
@@ -16,7 +17,17 @@ const Header = () => {
           <ul>
             {navigation.map((link) => (
               <li key={link.id}>
-                <NavLink to={link.path}>{link.name }</NavLink>
+                <NavLink
+                  to={link.path}
+                  style={({ isActive }) => (isActive
+                    ? {
+                      textDecoration: 'underline',
+                    }
+                    : {})}
+                  className="nav-link"
+                >
+                  {link.name}
+                </NavLink>
               </li>
             ))}
           </ul>
