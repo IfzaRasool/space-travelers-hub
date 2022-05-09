@@ -1,19 +1,29 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import pic from '../images/planet.png';
 
-export const Header = () => {
+const Header = () => {
   const navigation = [
-    { id: 1, link: '/',name:'rockets' },
-    { id: 2, link: '/mission',name:'mission' },
-    { id: 3, link: '/myprofile',name:'profile' },  
-  ]
+    { id: 1, path: '/', name: 'rockets' },
+    { id: 2, path: '/Mission', name: 'mission' },
+    { id: 3, path: '/MyProfile', name: 'My profile' },
+  ];
   return (
     <div>
-        <header>
+      <header>
+        <img src={pic} alt="site logo" />
         <nav>
-            
+          <ul>
+            {navigation.map((link) => (
+              <li key={link.id}>
+                <NavLink to={link.path}>{link.name }</NavLink>
+              </li>
+            ))}
+          </ul>
         </nav>
-
-        </header>
+      </header>
     </div>
-  )
-}
+  );
+};
+
+export default Header;
