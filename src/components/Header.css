@@ -1,0 +1,31 @@
+li {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  width: 40%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+}
+
+header img {
+  width: 70px;
+  height: 70px;
+}
