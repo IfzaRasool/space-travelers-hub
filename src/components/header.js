@@ -12,7 +12,9 @@ const Header = () => {
   return (
     <div>
       <header>
-        <img src={pic} alt="site logo" />
+        <NavLink to="/">
+          <img src={pic} alt="site logo" />
+        </NavLink>
         <nav>
           <ul>
             {navigation.map((link) => (
