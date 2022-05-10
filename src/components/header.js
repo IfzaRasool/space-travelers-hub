@@ -5,8 +5,8 @@ import pic from '../images/planet.png';
 
 const Header = () => {
   const navigation = [
-    { id: 1, path: '/', name: 'rockets' },
-    { id: 2, path: '/Mission', name: 'mission' },
+    { id: 1, path: '/', name: 'Rockets' },
+    { id: 2, path: '/Mission', name: 'Mission' },
     { id: 3, path: '/MyProfile', name: 'My profile' },
   ];
   return (
