@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.rocket-container {
+  padding: 10px 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.rocket-card {
+  display: flex;
+  gap: 20px;
+}
+
+.img-box {
+  width: 30%;
+  max-height: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.text-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.text-box > button {
+  padding: 10px 15px;
+  background-color: rgb(80, 80, 247);
+  color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 4px;
+  font-size: 0.91rem;
+  cursor: pointer;
+}
+
+.text-box > h2 {
+  color: rgb(26, 26, 26);
+}

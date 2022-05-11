@@ -1,10 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Header from './components/header';
 import Mission from './components/Mission';
 import MyProfile from './components/MyProfile';
-import Rockets from './components/Rockets';
+import Rockets from './components/Rockets/Rockets';
+import { getAsyncRockets } from './redux/Rockets/Rockets';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch((getAsyncRockets()));
+
   return (
     <div className="App">
       <Router>
