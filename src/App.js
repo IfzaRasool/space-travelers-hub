@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Header from './components/header';
 import Mission from './components/Mission';
-import MyProfile from './components/MyProfile';
+import MyProfile from './components/Profile/MyProfile';
 import Rockets from './components/Rockets/Rockets';
 import { getAsyncRockets } from './redux/Rockets/Rockets';
 
