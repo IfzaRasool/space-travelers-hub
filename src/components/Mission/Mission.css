@@ -18,11 +18,9 @@ button {
   display: grid;
   width: 100%;
   grid-template-columns: 11% 65% 12% 12%;
-  background-color: rgba(205, 219, 247, 0.8);
 }
 
 .item {
-  background-color: rgba(205, 219, 247, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 1rem;
 }
