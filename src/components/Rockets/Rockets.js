@@ -1,7 +1,6 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
-import { bookRocket } from '../../redux/Rockets/Rockets';
+import { bookRocket, cancelBookRocket } from '../../redux/Rockets/Rockets';
 import './Rocket.css';
 
 const Rockets = () => {
@@ -10,11 +9,14 @@ const Rockets = () => {
   const reserveRocket = (id) => {
     dispatch(bookRocket(id));
   };
+  const cancelReservation = (id) => {
+    dispatch(cancelBookRocket(id));
+  };
   return (
     <div className="rocket-container">
       {myRockets.map((rocket) => {
         const {
-          id, rocketName, description, flickrImages,
+          id, rocketName, description, flickrImages, reserved,
         } = rocket;
         return (
           <Rocket
@@ -23,7 +25,9 @@ const Rockets = () => {
             description={description}
             flickrImage={flickrImages[0]}
             handleClickProp={reserveRocket}
+            handleCancelReservation={cancelReservation}
             id={id}
+            reserved={reserved}
           />
         );
       })}

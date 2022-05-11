@@ -1,5 +1,6 @@
 const GET_ROCKETS = 'GET_ROCKETS';
 const BOOK_ROCKET = 'BOOK_ROCKET';
+const CANCEL_ROCKET = 'CANCEL_ROCKET';
 const BASE_URL = 'https://api.spacexdata.com/v3';
 const END_POINT = 'rockets';
 
@@ -27,6 +28,13 @@ const Reducer = (state = [], action) => {
         }
         return rocket;
       });
+    case CANCEL_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id === action.id) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
+      });
     default:
       return state;
   }
@@ -35,6 +43,8 @@ const Reducer = (state = [], action) => {
 const getRockets = (rockets) => ({ type: GET_ROCKETS, rockets });
 
 export const bookRocket = (id) => ({ type: BOOK_ROCKET, id });
+
+export const cancelBookRocket = (id) => ({ type: CANCEL_ROCKET, id });
 
 export const getAsyncRockets = () => (dispatch) => {
   fetch(`${BASE_URL}/${END_POINT}`, {

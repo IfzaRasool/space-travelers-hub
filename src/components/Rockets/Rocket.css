@@ -39,8 +39,31 @@ img {
   border-radius: 4px;
   font-size: 0.91rem;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .text-box > h2 {
   color: rgb(26, 26, 26);
+}
+
+.reserved-badge{
+  background-color: darkcyan;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 3px;
+}
+
+@media screen and (max-width:992px){
+  .text-box{
+    font-size: 13px;
+    width:60%;
+  }
+
+   .img-box{
+     width: 40%;
+   }
+
+   .text-box>button{
+     font-size: 0.75rem;
+   }
 }
