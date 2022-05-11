@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
-  const [reserved] = useState(false);
+  const [reserved, setReserved] = useState(false);
   const {
-    name, description, flickrImage,
+    name, description, flickrImage, handleClickProp, id,
   } = props;
   return (
     <article className="rocket-card">
@@ -14,7 +14,16 @@ const Rocket = (props) => {
       <div className="text-box">
         <h2>{name}</h2>
         <p>{description}</p>
-        <button type="button">{ reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+        <button
+          onClick={() => {
+            setReserved(!reserved);
+            handleClickProp(id);
+          }}
+          type="button"
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+
+        </button>
       </div>
     </article>
   );
@@ -24,6 +33,8 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   flickrImage: PropTypes.string.isRequired,
+  handleClickProp: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Rocket;
