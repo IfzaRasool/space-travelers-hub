@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
+import { Dispatch } from 'react';
 
 const Missions = () => {
   const missionStore = useSelector((state) => state.missionReducer);
-
+  const dispatch = useDispatch();
   return (
 
     <>
@@ -16,7 +17,7 @@ const Missions = () => {
       </div>
       <div>
         {missionStore.map((e) => (
-          <Mission key={e.id} missionName={e.name} description={e.description} />
+          <Mission key={e.id} missionName={e.name} description={e.description} joinMission={() => dispatch(removeBook(e.id))} />
         ))}
       </div>
 
