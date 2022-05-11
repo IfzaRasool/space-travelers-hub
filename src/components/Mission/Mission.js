@@ -6,12 +6,11 @@ const Mission = ({ missionName, description }) => (
   <div>
 
     <div className="mission-container">
-      <div className="mission-head">{ missionName }</div>
-      <div className="description">{description}</div>
-      <div className="status">Status</div>
-      <div className="join-mission" />
+      <div className="mission-head item">{ missionName }</div>
+      <div className="description item">{description}</div>
+      <div className="status item"><button type="button" className="status-btn">Active Member</button></div>
+      <div className="join-mission item"><button type="button" className="join-mission-btn">Join Mission</button></div>
     </div>
-
   </div>
 );
 

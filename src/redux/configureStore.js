@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import missionReducer from './mission/mission';

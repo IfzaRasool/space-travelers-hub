@@ -1,5 +1,11 @@
 .mission-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  border: 2px solid black;
+  width: 100%;
+  grid-template-columns: 11% 65% 12% 12%;
+}
+
+.item {
+  background-color: rgba(205, 219, 247, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1rem;
 }
