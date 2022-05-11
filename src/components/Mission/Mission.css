@@ -1,0 +1,5 @@
+.mission-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border: 2px solid black;
+}
