@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: darkcyan;
+  color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 4px;
+  font-size: 0.91rem;
+  cursor: pointer;
+}
+
+.mission-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 11% 65% 12% 12%;
+  background-color: rgba(205, 219, 247, 0.8);
+}
+
+.item {
+  background-color: rgba(205, 219, 247, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+}
+
+h4 {
+  padding-left: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
