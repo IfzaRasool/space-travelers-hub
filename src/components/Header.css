@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;1,300;1,400&display=swap');
+
+:root {
+  --font: 'Bitter', serif;
+  --font-color: 'beige';
+}
+
 li {
   list-style: none;
+  color: beige;
 }
 
 .nav-link {
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
 }
 
 nav {
@@ -15,6 +23,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: beige;
 }
 
 header {
@@ -23,6 +32,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 80px;
+  background-color: darkcyan;
+  color: var(--font-color);
+  font-family: var(--font);
 }
 
 header img {

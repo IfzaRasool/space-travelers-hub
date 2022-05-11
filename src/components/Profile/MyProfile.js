@@ -1,25 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import './MyProfile.css';
 
-const MyProfile = () => {
-  const appStates = useSelector((state) => state);
-  const { Rockets } = appStates;
-  return (
-    <div className="profile-container">
-      <section>
-        <h2>My Missions</h2>
-      </section>
-      <section>
-        <h2>My Rockets</h2>
-        {Rockets.map((rocket) => {
-          if (rocket.reserved) {
-            return <p>{rocket.rocketName}</p>;
-          }
-          return '';
-        })}
-      </section>
+const MyProfile = () => (
+  <div>
+    <div className="myProfile-container">
+      <div className="mission-item">
+        <h3> My Missions</h3>
+        <h6>dfds</h6>
+      </div>
+      <div>
+        <h3>My Rockets</h3>
+      </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default MyProfile;
