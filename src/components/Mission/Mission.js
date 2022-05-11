@@ -7,7 +7,7 @@ const Mission = ({
 }) => {
   const missionLeave = {
     padding: '10px 15px',
-    backgroundColor: 'darkcyan',
+    backgroundColor: 'grey',
     color: 'rgb(240, 240, 240)',
     border: 'none',
     borderRadius: '4px',
@@ -21,6 +21,16 @@ const Mission = ({
     border: '2px solid darkcyan',
   };
 
+  const activeMember = {
+    padding: '10px 15px',
+    backgroundColor: 'darkcyan',
+    color: 'rgb(240, 240, 240)',
+    border: 'none',
+    borderRadius: '4px',
+    fontSize: '0.91rem',
+    cursor: 'pointer',
+  };
+
   return (
     <div>
 
@@ -28,7 +38,7 @@ const Mission = ({
         <div className="mission-head item">{ missionName }</div>
         <div className="description item">{description}</div>
         <div className="status item">
-          <button type="button" style={reserved ? missionJoin : missionLeave}>
+          <button type="button" style={reserved ? activeMember : missionLeave}>
             {reserved ? 'Active Member' : 'Not A Member' }
           </button>
 
