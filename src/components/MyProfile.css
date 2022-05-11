@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.myProfile-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2rem;
+}
+
+.mission-item {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+h6 {
+  border: 1px solid black;
+}
