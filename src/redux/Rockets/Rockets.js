@@ -40,7 +40,7 @@ const Reducer = (state = [], action) => {
   }
 };
 
-const getRockets = (rockets) => ({ type: GET_ROCKETS, rockets });
+export const getRockets = (rockets) => ({ type: GET_ROCKETS, rockets });
 
 export const bookRocket = (id) => ({ type: BOOK_ROCKET, id });
 

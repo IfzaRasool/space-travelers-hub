@@ -30,3 +30,36 @@ exports[`test snapshots for all components renders rocket page correctly 1`] = `
   className="rocket-container"
 />
 `;
+
+exports[`test snapshots for all components renders single rocket correctly 1`] = `
+<article
+  className="rocket-card"
+>
+  <div
+    className="img-box"
+  >
+    <img
+      alt="rocket"
+    />
+  </div>
+  <div
+    className="text-box"
+  >
+    <h2 />
+    <p>
+       
+    </p>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "transition": "all 0.3s",
+        }
+      }
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</article>
+`;
