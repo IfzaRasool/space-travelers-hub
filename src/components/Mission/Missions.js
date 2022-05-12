@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
-import { joinMission, leftMission } from '../../redux/mission/mission';
+import { joinMission, leaveMission } from '../../redux/mission/mission';
 
 const Missions = () => {
   const missionStore = useSelector((state) => state.missionReducer);
@@ -22,7 +22,7 @@ const Missions = () => {
             missionName={e.name}
             description={e.description}
             reserved={e.reserved}
-            leaveMission={() => dispatch(leftMission(e.id))}
+            leaveMission={() => dispatch(leaveMission(e.id))}
             joinMission={() => dispatch(joinMission(e.id))}
           />
         ))}

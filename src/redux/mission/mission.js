@@ -43,7 +43,7 @@ export async function fetchMission(dispatch) {
   dispatch(additem(missionData));
 }
 
-export const missionStatus = (id) => ({
+export const joinMission = (id) => ({
   type: JOIN_MISSION,
   id,
 });
@@ -52,13 +52,5 @@ export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
   id,
 });
-
-export const joinMission = (id) => (dispatch) => {
-  dispatch(missionStatus(id));
-};
-
-export const leftMission = (id) => (dispatch) => {
-  dispatch(leaveMission(id));
-};
 
 export default missionReducer;
