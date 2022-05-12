@@ -25,10 +25,87 @@ exports[`test snapshots for all components renders Profile correctly 1`] = `
 </div>
 `;
 
+exports[`test snapshots for all components renders mission page correctly 1`] = `
+Array [
+  <div
+    className="mission-container"
+  >
+    <h4>
+       Mission
+    </h4>
+    <h4>
+       Description
+    </h4>
+    <h4>
+       Status
+    </h4>
+    <div />
+  </div>,
+  <div />,
+]
+`;
+
 exports[`test snapshots for all components renders rocket page correctly 1`] = `
 <div
   className="rocket-container"
 />
+`;
+
+exports[`test snapshots for all components renders single mission correctly 1`] = `
+<div>
+  <div
+    className="mission-container"
+  >
+    <div
+      className="mission-head item"
+    />
+    <div
+      className="description item"
+    />
+    <div
+      className="status item"
+    >
+      <button
+        style={
+          Object {
+            "backgroundColor": "grey",
+            "border": "none",
+            "borderRadius": "4px",
+            "color": "rgb(240, 240, 240)",
+            "cursor": "pointer",
+            "fontSize": "0.91rem",
+            "padding": "10px 15px",
+          }
+        }
+        type="button"
+      >
+        Not A Member
+      </button>
+    </div>
+    <div
+      className="join-mission item"
+    >
+      <button
+        className="join-mission-btn"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "grey",
+            "border": "none",
+            "borderRadius": "4px",
+            "color": "rgb(240, 240, 240)",
+            "cursor": "pointer",
+            "fontSize": "0.91rem",
+            "padding": "10px 15px",
+          }
+        }
+        type="button"
+      >
+        Join Mission
+      </button>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`test snapshots for all components renders single rocket correctly 1`] = `
