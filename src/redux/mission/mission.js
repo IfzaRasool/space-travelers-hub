@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const ADD_MISSION = 'ADD_MISSION';
 const JOIN_MISSION = 'JOIN_MISSION';
 const LEAVE_MISSION = 'LEAVE_MISSION';
@@ -18,7 +17,7 @@ const missionReducer = (state = [], action) => {
       });
     case LEAVE_MISSION:
       return state.map((mission) => {
-        if (mission.id !== action.id) {
+        if (mission.id === action.id) {
           return { ...mission, reserved: false };
         }
         return mission;
@@ -51,11 +50,15 @@ export const missionStatus = (id) => ({
 
 export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
-  id: console.log(id),
+  id,
 });
 
 export const joinMission = (id) => (dispatch) => {
   dispatch(missionStatus(id));
+};
+
+export const leftMission = (id) => (dispatch) => {
+  dispatch(leaveMission(id));
 };
 
 export default missionReducer;
