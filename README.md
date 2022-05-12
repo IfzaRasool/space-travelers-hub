@@ -1,6 +1,6 @@
 # space-travelers-hub
-> space-travelers-hub is web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
+> space-travelers-hub is web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ## Built With
 
@@ -17,8 +17,9 @@
   > Babel,
   > Thunker
 
+## Live Demo
 
-## Getting Started
+[Space Traveler's Hub Project Link](https://627d39b107b3bf0f75556474--dazzling-travesseiro-1e9711.netlify.app/)
 
 ### Prerequisites
 
@@ -42,6 +43,7 @@ $ cd space-travelers-hub
 ```
 $ npm i
 ```
+
 ```
 $ npm start
 ```
@@ -77,14 +79,13 @@ npm test
 - GitHub: [@tylher](https://github.com/tylher)
 - Twitter: [@tylher123](https://twitter.com/tylher123)
 - LinkedIn: [Taiwo Adediran](https://www.linkedin.com/in/taiwo-adediran-327654127/)
-  
+
 👤 <a href="https://github.com/IfzaRasool" target="blank"><img align="center"
       src="https://avatars.githubusercontent.com/u/93009273?v=4"
       alt="adam pithewan" height="50" width="50"/></a> **Ifza Arain**
 
 - GitHub: [@IfzaRazool](https://github.com/IfzaRasool)
 - - LinkedIn: [Ifza Arain](https://www.linkedin.com/in/ifza-arain-0b922b102/)
-
 
 ## 🤝 Contributing
 
