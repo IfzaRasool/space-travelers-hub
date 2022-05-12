@@ -8,18 +8,19 @@ const MyProfile = () => {
     (state) => state,
   );
 
-  const missionName = () => {
-    console.log('profile');
-    // const result = missionStore.filter((name) => (name.id));
-    // console.log(result);
-  };
-
   return (
     <div>
       <div className="myProfile-container">
-        <div className="mission-item">
+        <div>
           <h3> My Missions</h3>
-          <h6 onLoad={missionName()}>{missionStore.map((e) => e.name)}</h6>
+          <div className="reserved-container">
+            {missionStore
+              .filter((mission) => mission.reserved)
+              .map((data) => {
+                const { id, name } = data;
+                return <p className="rocket-name" key={id}>{name}</p>;
+              })}
+          </div>
         </div>
         <div>
           <h3>My Rockets</h3>
