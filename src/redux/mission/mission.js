@@ -27,7 +27,7 @@ const missionReducer = (state = [], action) => {
   }
 };
 
-export const additem = (payload) => ({
+export const addMission = (payload) => ({
   type: ADD_MISSION,
   payload,
 });
@@ -40,7 +40,7 @@ export async function fetchMission(dispatch) {
     name: element.mission_name,
     description: element.description,
   }));
-  dispatch(additem(missionData));
+  dispatch(addMission(missionData));
 }
 
 export const joinMission = (id) => ({
