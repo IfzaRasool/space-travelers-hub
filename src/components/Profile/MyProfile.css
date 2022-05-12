@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.myProfile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  gap: 50px;
+}
+
+.reserved-container {
+  border: 1px solid rgb(10, 9, 9);
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.rocket-name {
+  border: 1px solid rgb(10, 9, 9);
+  padding: 0.5rem;
+}
+
+.rocket-name:nth-child(odd) {
+  border-top: 2px rgb(185, 183, 183) solid;
+}
