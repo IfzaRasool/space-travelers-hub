@@ -4,7 +4,9 @@ import './MyProfile.css';
 import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
-  const missionStore = useSelector((state) => state.missionReducer);
+  const { missionReducer: missionStore, Rockets: rocketStore } = useSelector(
+    (state) => state,
+  );
 
   const missionName = () => {
     console.log('profile');
@@ -17,12 +19,18 @@ const MyProfile = () => {
       <div className="myProfile-container">
         <div className="mission-item">
           <h3> My Missions</h3>
-          <h6 onLoad={missionName()}>
-            {missionStore.map((e) => e.name)}
-          </h6>
+          <h6 onLoad={missionName()}>{missionStore.map((e) => e.name)}</h6>
         </div>
         <div>
           <h3>My Rockets</h3>
+          <div className="reserved-container">
+            {rocketStore
+              .filter((rocket) => rocket.reserved)
+              .map((data) => {
+                const { id, rocketName } = data;
+                return <p className="rocket-name" key={id}>{rocketName}</p>;
+              })}
+          </div>
         </div>
       </div>
     </div>
